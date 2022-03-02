@@ -1,13 +1,9 @@
 package view;
 
-import model.GameState;
-import model.TicTacToeGame;
-
 import javax.swing.*;
 
 public class TicTacToeFrame extends JFrame {
 
-    TicTacToeGame ticTacToeGame = new TicTacToeGame();
     TicTacToePanel ticTacToePanel = new TicTacToePanel();
 
     public TicTacToeFrame() {

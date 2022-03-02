@@ -103,7 +103,6 @@ public class TicTacToeGame {
             System.out.println("NullPointerException");
         }
 
-
         return (first == value || second == value);
     }
 

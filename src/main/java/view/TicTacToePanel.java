@@ -68,17 +68,24 @@ public class TicTacToePanel extends JPanel {
         JOptionPane pane = new JOptionPane();
         switch (getGameState()) {
             case X_WON:
-                System.out.println("X wins.");
-                JOptionPane.showConfirmDialog(pane, "X wins.");
+                disableButtons();
+                JOptionPane.showMessageDialog(pane, "X wins.");
                 break;
             case O_WON:
-                System.out.println("O wins.");
-                JOptionPane.showConfirmDialog(pane, "O wins.");
+                disableButtons();
+                JOptionPane.showMessageDialog(pane, "O wins.");
                 break;
             case DRAW:
-                System.out.println("Draw.");
-                JOptionPane.showConfirmDialog(pane, "The game ended in a draw.");
+                JOptionPane.showMessageDialog(pane, "The game ended in a draw.");
                 break;
+        }
+    }
+
+    public void disableButtons() {
+        for (int i = 0; i < buttons.length; i++) {
+            for (int j = 0; j < buttons[i].length; j++) {
+                buttons[i][j].setEnabled(false);
+            }
         }
     }
 
